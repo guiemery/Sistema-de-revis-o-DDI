@@ -203,6 +203,49 @@
                 border-radius: 50%;
                 box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
             }
+
+            /* ===== Redução geral de espaçamento/tipografia (deixa a tela menos "estourada") ===== */
+            .p-8 { padding: 14px !important; }
+            .p-6 { padding: 12px !important; }
+            .px-8 { padding-left: 14px !important; padding-right: 14px !important; }
+            .px-6 { padding-left: 12px !important; padding-right: 12px !important; }
+            .py-8 { padding-top: 14px !important; padding-bottom: 14px !important; }
+            .py-6 { padding-top: 12px !important; padding-bottom: 12px !important; }
+            .mb-8 { margin-bottom: 16px !important; }
+            .mb-6 { margin-bottom: 12px !important; }
+            .gap-6 { gap: 8px !important; }
+            .gap-4 { gap: 8px !important; }
+            .rounded-2xl { border-radius: 14px !important; }
+            .rounded-xl { border-radius: 12px !important; }
+
+            .text-3xl { font-size: 1.5rem !important; }
+            .text-2xl { font-size: 1.15rem !important; }
+            .text-xl { font-size: 1.05rem !important; }
+            .text-lg { font-size: 0.95rem !important; }
+
+            /* Header: título e logo não espremem em telas estreitas */
+            .glassmorphism.rounded-2xl.shadow-2xl {
+                padding: 14px !important;
+            }
+            .glassmorphism.rounded-2xl.shadow-2xl > .flex.items-center.justify-between {
+                flex-wrap: wrap;
+                row-gap: 10px;
+            }
+
+            /* Cards de estatística (números grandes tipo text-3xl/4xl em stat-card) */
+            .stat-card, [class*="stat-card"] {
+                padding: 10px !important;
+            }
+        }
+
+        /* Ajuste extra para telas bem pequenas (celulares compactos) */
+        @media (max-width: 400px) {
+            h1 { font-size: 1.25rem !important; }
+            h2 { font-size: 1.1rem !important; }
+            .text-3xl { font-size: 1.3rem !important; }
+            .aba-navegacao { padding: 6px 8px !important; font-size: 0.8rem !important; }
+            .logo-ddi { width: 32px !important; height: 32px !important; }
+            .p-8, .p-6 { padding: 10px !important; }
         }
         
         /* ===== DARK MODE ===== */
